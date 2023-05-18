@@ -49,7 +49,7 @@ namespace Listing_api.Controllers
         {
             if (id != country.Id)
             {
-                return BadRequest();
+                return BadRequest("Invalid record id");
             }
 
             _context.Entry(country).State = EntityState.Modified;
